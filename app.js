@@ -60,17 +60,19 @@ app.use((req, res, next) => {
 });
 
 app.use(adminRoutes);
-app.use('/home', shopRoutes);
+app.use(shopRoutes);
 app.use(authRoutes);
 
 errorController = require('./controllers/error');
 app.use(errorController.get404);
 
+const port = process.env.PORT || 8000;
+
 mongoose
     .connect(MONGODB_URI)
     .then(result => {
         console.log('Connect!');
-        app.listen(process.env.PORT || 8000);
+        app.listen(port);
     })
     .catch(err => {
         console.log(err);
