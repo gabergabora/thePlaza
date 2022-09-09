@@ -329,7 +329,7 @@ ol {
 
 .hero-section {
     height: 100%;
-    background: #000;
+    background: #E3D0A8;
     background-position: bottom center;
     overflow: hidden;
 }
@@ -922,7 +922,7 @@ ol {
 ========================*/
 
 .page-info-section {
-    background: rgba(0, 0, 0, 0.7);
+    background: #E3D0A8;
 }
 
 .page-info-section.page-info-big {
